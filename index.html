@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watamu Cultural Festival 2026 | Destination Watamu</title>
+  <style>
+    :root {
+      --ocean-deep: #0A2E2F;
+      --ocean-teal: #0F3D3E;
+      --sand-gold: #D4A373;
+      --sand-light: #E9C496;
+      --cream-bg: #FAF9F6;
+      --white: #FFFFFF;
+      --text-dark: #1E2525;
+      --text-muted: #526060;
+      --border-soft: rgba(15, 61, 62, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--cream-bg); color: var(--text-dark); line-height: 1.6; }
+    header { position: sticky; top: 0; z-index: 100; background: var(--ocean-deep); padding: 0.9rem 1.25rem; }
+    .nav-wrap { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .brand { color: var(--white); text-decoration: none; font-weight: 700; }
+    .brand span { color: var(--sand-gold); }
+    .nav-links { display: flex; gap: 1.25rem; list-style: none; flex-wrap: wrap; }
+    .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; }
+    .hero { text-align: center; color: var(--white); padding: 4.5rem 1.25rem; background: linear-gradient(180deg, rgba(10,46,47,0.85), rgba(15,61,62,0.92)), url('images/hero-watamu.jpg') center/cover no-repeat; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 0.75rem; }
+    .hero-theme { color: var(--sand-gold); font-weight: 600; margin-bottom: 0.5rem; }
+    .countdown { display: inline-grid; grid-template-columns: repeat(4, 70px); gap: 0.6rem; margin: 1.5rem 0; }
+    .count-box { background: rgba(255,255,255,0.1); border: 1px solid rgba(212,163,115,0.4); border-radius: 8px; padding: 0.6rem; }
+    .count-box span { display: block; font-size: 1.3rem; font-weight: 700; color: var(--sand-gold); }
+    .count-box small { font-size: 0.7rem; text-transform: uppercase; }
+    section { padding: 3.5rem 1.25rem; }
+    .container { max-width: 1120px; margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 2rem; }
+    .section-title h2 { color: var(--ocean-deep); font-size: 2rem; margin-bottom: 0.4rem; }
+    .media-card { background: var(--white); border: 1px solid var(--border-soft); border-left: 4px solid var(--sand-gold); border-radius: 12px; padding: 1.25rem; display: grid; grid-template-columns: minmax(240px, 360px) 1fr; gap: 1.25rem; align-items: center; margin-bottom: 2rem; }
+    .local-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; background: var(--ocean-deep); display: block; object-fit: cover; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+    .card { background: var(--white); border: 1px solid var(--border-soft); border-radius: 12px; padding: 1.25rem; }
+    .card h3 { color: var(--ocean-deep); margin-bottom: 0.4rem; }
+    .card p { color: var(--text-muted); font-size: 0.92rem; }
+    .role-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ocean-teal); margin-bottom: 0.35rem; }
+    .visual-card { background: var(--white); border: 1px solid var(--border-soft); border-radius: 12px; overflow: hidden; cursor: pointer; }
+    .visual-frame { aspect-ratio: 3 / 4; background: var(--ocean-deep); }
+    .visual-frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .visual-label { padding: 0.75rem; text-align: center; font-weight: 700; color: var(--ocean-deep); }
+    .activity-img { width: 100%; height: 190px; object-fit: cover; object-position: center top; border-radius: 8px; margin-bottom: 0.75rem; background: var(--ocean-teal); }
+    .dark-band { background: var(--ocean-deep); color: var(--white); }
+    .dark-band .section-title h2 { color: var(--white); }
+    .dark-band .card { background: rgba(255,255,255,0.06); border-color: rgba(212,163,115,0.3); color: var(--white); }
+    .dark-band .card h3 { color: var(--sand-gold); }
+    .dark-band .card p { color: rgba(255,255,255,0.85); }
+    .dark-band a { color: var(--sand-light); display: inline-block; margin-top: 0.75rem; font-weight: 600; }
+    .donation-box { margin-top: 1.5rem; background: rgba(212,163,115,0.12); border: 1.5px solid var(--sand-gold); border-radius: 12px; padding: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; align-items: center; }
+    .donation-box h3 { color: var(--sand-gold); margin-bottom: 0.35rem; }
+    .donation-box p { color: rgba(255,255,255,0.9); font-size: 0.92rem; }
+    .donation-number { background: rgba(10,46,47,0.85); border: 1px solid rgba(212,163,115,0.45); border-radius: 10px; padding: 1rem 1.25rem; }
+    footer { background: #061E1F; color: rgba(255,255,255,0.75); text-align: center; padding: 2rem 1.25rem; font-size: 0.9rem; }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; padding: 1rem; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 92%; max-height: 88vh; border-radius: 8px; }
+    @media (max-width: 720px) { .media-card { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="#">WATAMU <span>CULTURAL FESTIVAL</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">Destination Watamu</a></li>
+        <li><a href="#pavilions">Pavilions</a></li>
+        <li><a href="#activities">Ocean Activities</a></li>
+        <li><a href="#involved">Get Involved</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-theme">Destination Watamu: Celebrate, Preserve, and Promote</div>
+      <h1>Watamu Cultural Festival 2026</h1>
+      <p>December 18–20, 2026 • Watamu Beach Grounds, Kilifi County</p>
+      <div class="countdown">
+        <div class="count-box"><span id="days">--</span><small>Days</small></div>
+        <div class="count-box"><span id="hours">--</span><small>Hours</small></div>
+        <div class="count-box"><span id="minutes">--</span><small>Mins</small></div>
+        <div class="count-box"><span id="seconds">--</span><small>Secs</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Destination Watamu</h2>
+        <p>Celebrate, Preserve, and Promote — an initiative of the Watamu Cultural Centre.</p>
+      </div>
+
+      <!-- Local Video File from images/ Folder -->
+      <div class="media-card">
+        <video class="local-video" controls preload="metadata" playsinline>
+          <source src="images/citizen-tv-launch.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div>
+          <h3>Featured on Citizen TV — Official Media Launch</h3>
+          <p>Watch the media launch coverage featured on Citizen TV ahead of December 18–20, 2026 at Watamu Beach Grounds.</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 2rem;">
+        <div class="card">
+          <h3>Celebrate, Preserve &amp; Promote</h3>
+          <p>Honoring Giriama, Bajuni, Swahili, and coastal heritage through living traditions, ocean sports, culinary craft, and community-led conservation at Watamu Beach Grounds.</p>
+        </div>
+        <div class="card">
+          <h3>Event Details</h3>
+          <p><strong>Dates:</strong> December 18–20, 2026<br /><strong>Venue:</strong> Watamu Beach Grounds<br /><strong>Organizers:</strong> Watamu Cultural Festival Secretariat &amp; Watamu Cultural Centre</p>
+        </div>
+      </div>
+
+      <div class="grid-4">
+        <div class="visual-card" onclick="openLightbox('images/story-historia.jpg')">
+          <div class="visual-frame"><img src="images/story-historia.jpg" alt="Historia" onerror="this.style.display='none'" /></div>
+          <div class="visual-label">Historia</div>
+        </div>
+        <div class="visual-card" onclick="openLightbox('images/story-kwa-nini.jpg')">
+          <div class="visual-frame"><img src="images/story-kwa-nini.jpg" alt="Kwa Nini Watamu Cultural Festival" onerror="this.style.display='none'" /></div>
+          <div class="visual-label">Kwa Nini Watamu Cultural Festival</div>
+        </div>
+        <div class="visual-card" onclick="openLightbox('images/story-maono.jpg')">
+          <div class="visual-frame"><img src="images/story-maono.jpg" alt="Maono na Dhamira" onerror="this.style.display='none'" /></div>
+          <div class="visual-label">Maono na Dhamira</div>
+        </div>
+        <div class="visual-card" onclick="openLightbox('images/story-karibuni.jpg')">
+          <div class="visual-frame"><img src="images/story-karibuni.jpg" alt="Karibuni" onerror="this.style.display='none'" /></div>
+          <div class="visual-label">Karibuni</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pavilions">
+    <div class="container">
+      <div class="section-title">
+        <h2>Four Pavilions &amp; The Centre Stage</h2>
+        <p>Thematic spaces and main performance arena at Watamu Beach Grounds.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card"><h3>Taste of Watamu</h3><p>Coastal cuisine, Swahili and Mijikenda flavors, wood-fired baking, and local food artisans.</p></div>
+        <div class="card"><h3>Destination Watamu</h3><p>Indigenous craft, heritage storytelling, traditional arts, and community enterprises.</p></div>
+        <div class="card"><h3>International Hub</h3><p>Cross-cultural exchange, Indian Ocean delegations, and global visitors.</p></div>
+        <div class="card"><h3>Marine Hub</h3><p>Ocean stewardship, reef protection, artisanal fishing heritage, and coastal conservation.</p></div>
+      </div>
+      <div class="card" style="margin-top: 1.25rem;">
+        <h3>The Centre Stage</h3>
+        <p>Main performance arena hosting live taarab, chakacha, bango, Mijikenda percussion and dance troupes, and evening showcases across all three days.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ocean Competitions</h2>
+        <p>Maritime traditions and shoreline sports on the waters of Watamu.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <img class="activity-img" src="images/activity-dhow.jpg" alt="Dhow Racing" onerror="this.style.display='none'" />
+          <h3>Dhow Racing</h3>
+          <p>Traditional sailing dhows competing across Watamu's coastal waters.</p>
+        </div>
+        <div class="card">
+          <img class="activity-img" src="images/activity-fishing.jpg" alt="Fishing Competition" onerror="this.style.display='none'" />
+          <h3>Fishing Competition</h3>
+          <p>Local fishermen and coastal anglers taking part in a regulated sea competition.</p>
+        </div>
+        <div class="card">
+          <img class="activity-img" src="images/activity-swimming.jpg" alt="Swimming Competition" onerror="this.style.display='none'" />
+          <h3>Swimming Competition</h3>
+          <p>Open-water coastal swimming races along a marked shoreline course.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="involved" class="dark-band">
+    <div class="container">
+      <div class="section-title">
+        <h2>5 Ways to Get Involved</h2>
+        <p>Click any poster to expand or contact the Secretariat.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="visual-frame" style="margin-bottom:0.75rem;border-radius:8px;cursor:pointer;" onclick="openLightbox('images/poster-partner.jpg')"><img src="images/poster-partner.jpg" alt="Partner With Us" onerror="this.style.display='none'" /></div>
+          <h3>1. Partner With Us</h3>
+          <p>Institutional, corporate, and media partnerships.</p>
+          <a href="mailto:secretariat@watamuculturalfestival.co.ke?subject=Partnership%20-%20WCF%202026">Inquire →</a>
+        </div>
+        <div class="card">
+          <div class="visual-frame" style="margin-bottom:0.75rem;border-radius:8px;cursor:pointer;" onclick="openLightbox('images/poster-volunteer.jpg')"><img src="images/poster-volunteer.jpg" alt="Volunteership" onerror="this.style.display='none'" /></div>
+          <h3>2. Volunteership</h3>
+          <p>Ground operations, hospitality, and community support.</p>
+          <a href="mailto:secretariat@watamuculturalfestival.co.ke?subject=Volunteership%20-%20WCF%202026">Apply →</a>
+        </div>
+        <div class="card">
+          <div class="visual-frame" style="margin-bottom:0.75rem;border-radius:8px;cursor:pointer;" onclick="openLightbox('images/poster-vendor.jpg')"><img src="images/poster-vendor.jpg" alt="Vendorship" onerror="this.style.display='none'" /></div>
+          <h3>3. Vendorship</h3>
+          <p>Food, craft, art, and enterprise booths at Watamu Beach Grounds.</p>
+          <a href="mailto:secretariat@watamuculturalfestival.co.ke?subject=Vendorship%20-%20WCF%202026">Register Booth →</a>
+        </div>
+        <div class="card">
+          <div class="visual-frame" style="margin-bottom:0.75rem;border-radius:8px;cursor:pointer;" onclick="openLightbox('images/poster-international.jpg')"><img src="images/poster-international.jpg" alt="International Hub" onerror="this.style.display='none'" /></div>
+          <h3>4. International Hub</h3>
+          <p>International delegations, cultural groups, and global exhibitors.</p>
+          <a href="mailto:secretariat@watamuculturalfestival.co.ke?subject=International%20Hub%20-%20WCF%202026">Connect →</a>
+        </div>
+        <div class="card">
+          <div class="visual-frame" style="margin-bottom:0.75rem;border-radius:8px;cursor:pointer;" onclick="openLightbox('images/poster-donate.jpg')"><img src="images/poster-donate.jpg" alt="Donations" onerror="this.style.display='none'" /></div>
+          <h3>5. Donations</h3>
+          <p>Support local cultural troupes, youth ocean safety, and heritage initiatives.</p>
+          <a href="#donations">Contribution Details →</a>
+        </div>
+      </div>
+
+      <div id="donations" class="donation-box">
+        <div>
+          <h3>Donations &amp; Community Support</h3>
+          <p>Supporting participating cultural troupes, ocean competitions, and community operations for Watamu Cultural Festival 2026.</p>
+        </div>
+        <div class="donation-number">
+          <p style="color: var(--sand-gold); font-weight: 700; margin-bottom: 0.25rem;">Official Donations Number</p>
+          <p style="font-size: 1.05rem; color: #FFFFFF; font-weight: 700;">0723732453</p>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 0.25rem;">Ref: Watamu Cultural Festival 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership">
+    <div class="container">
+      <div class="section-title">
+        <h2>Leadership &amp; Secretariat</h2>
+        <p>Festival direction, coordination, marine leadership, and cultural troupes.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <span class="role-tag">Founder &amp; Festival Director</span>
+          <h3>Abdul Mubarak Kemboi Rick</h3>
+          <p>Founder of the Watamu Cultural Festival and Director of the Watamu Cultural Festival Secretariat, guiding Destination Watamu.</p>
+        </div>
+        <div class="card">
+          <span class="role-tag">Lead Coordinator</span>
+          <h3>Noni Mbugus</h3>
+          <p>Coordinating festival logistics, operations, schedules, and ground execution at Watamu Beach Grounds.</p>
+        </div>
+        <div class="card">
+          <span class="role-tag">BMU Chairman</span>
+          <h3>Fahd Farid</h3>
+          <p>Leading Watamu Beach Management Unit (BMU) coastal coordination, beach stewardship, and ocean competitions.</p>
+        </div>
+        <div class="card">
+          <span class="role-tag">Cultural Troupe</span>
+          <h3>Participating Cultural Troupes</h3>
+          <p>Local Giriama, Bajuni, Swahili, and coastal performing groups bringing traditional music, dance, and storytelling to the Centre Stage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Watamu Cultural Festival Secretariat</strong> • Watamu, Kilifi County • secretariat@watamuculturalfestival.co.ke</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+    <img id="lightbox-img" src="" alt="Expanded view" />
+  </div>
+
+  <script>
+    const target = new Date("December 18, 2026 09:00:00 GMT+0300").getTime();
+    setInterval(() => {
+      const diff = Math.max(0, target - Date.now());
+      document.getElementById("days").textContent = String(Math.floor(diff / 86400000)).padStart(2, "0");
+      document.getElementById("hours").textContent = String(Math.floor((diff / 3600000) % 24)).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(Math.floor((diff / 60000) % 60)).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+    }, 1000);
+
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").classList.add("open");
+    }
+  </script>
+</body>
+</html>
