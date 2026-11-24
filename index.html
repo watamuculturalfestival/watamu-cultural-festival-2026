@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watamu Cultural Festival | December 18–20, 2026</title>
+  <meta name="description" content="Destination Watamu: Celebrate, Preserve, and Promote. Join the Watamu Cultural Festival on December 18–20, 2026 at Watamu Beach Grounds, Kenya." />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(rgba(10, 25, 38, 0.62), rgba(10, 25, 38, 0.75)),
+                  url("images/hero-watamu.jpg") center center / cover no-repeat fixed;
+      color: #ffffff;
+      line-height: 1.65;
+    }
+
+    /* Full-width responsive images without clipping or awkward stretching */
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    header.hero {
+      min-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4rem 7%;
+      background: transparent;
+    }
+
+    header.hero .eyebrow {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #f8fafc;
+    }
+
+    header.hero h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    header.hero .dates {
+      margin: 0 0 1.75rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f3c669;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      background-color: #c8963e;
+      color: #0b2538;
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .section-heritage {
+      background: rgba(247, 243, 235, 0.95);
+      color: #1c252c;
+      padding: 4.5rem 7%;
+      border-top: 4px solid #c8963e;
+    }
+
+    .section-pavilions {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      color: #1c252c;
+      padding: 4.5rem 7%;
+    }
+
+    .section-media {
+      background: rgba(11, 37, 56, 0.88);
+      backdrop-filter: blur(8px);
+      color: #f8fafc;
+      padding: 4.5rem 7%;
+    }
+
+    .section-apply {
+      background: rgba(250, 247, 240, 0.95);
+      color: #1c252c;
+      padding: 4.5rem 7%;
+    }
+
+    .section-leadership {
+      background: rgba(255, 255, 255, 0.94);
+      color: #1c252c;
+      padding: 4.5rem 7%;
+    }
+
+    .section-donate {
+      background: rgba(11, 37, 56, 0.92);
+      backdrop-filter: blur(8px);
+      color: #f8fafc;
+      padding: 4.5rem 7%;
+    }
+
+    .section-contact {
+      background: rgba(247, 243, 235, 0.96);
+      color: #1c252c;
+      padding: 4.5rem 7%;
+    }
+
+    h2 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      line-height: 1.25;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      color: #1c252c;
+      border: 1px solid rgba(11, 37, 56, 0.14);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    .section-media .card,
+    .section-donate .card {
+      background: rgba(255, 255, 255, 0.08);
+      color: #f8fafc;
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .role {
+      margin: 0.25rem 0 0.75rem !important;
+      font-weight: 700;
+      color: #9c6b19;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 0.9rem;
+      font-weight: 700;
+      color: #0b2538;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #081826;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 2rem 7%;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header.hero {
+        align-items: flex-start;
+        padding: 3.5rem 5%;
+      }
+
+      .section-heritage,
+      .section-pavilions,
+      .section-media,
+      .section-apply,
+      .section-leadership,
+      .section-donate,
+      .section-contact,
+      footer {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <p class="eyebrow">Destination Watamu — Celebrate, Preserve, and Promote</p>
+    <h1>Watamu Cultural Festival</h1>
+    <p class="dates">December 18–20, 2026 | Watamu Beach Grounds, Kenya</p>
+    <div class="btn-row">
+      <a href="#apply" class="btn">Apply &amp; Register</a>
+      <a href="#donate" class="btn btn-secondary">Support the Festival</a>
+    </div>
+  </header>
+
+  <section id="theme" class="section-heritage">
+    <h2>Destination Watamu</h2>
+    <p>Celebrating, preserving, and promoting the living heritage, coastal ecology, arts, and community spirit of Watamu.</p>
+  </section>
+
+  <section id="pavilions" class="section-pavilions">
+    <h2>Festival Pavilions</h2>
+    <p>Explore the four dedicated pavilions at Watamu Beach Grounds:</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Taste of Watamu</h3>
+        <p>Coastal culinary heritage, local flavors, and traditional foodways.</p>
+      </div>
+      <div class="card">
+        <h3>Destination Watamu</h3>
+        <p>Cultural storytelling, heritage preservation, and local experiences.</p>
+      </div>
+      <div class="card">
+        <h3>International Hub</h3>
+        <p>Cross-cultural exchange, global partners, and curated showcases.</p>
+      </div>
+      <div class="card">
+        <h3>Marine Hub</h3>
+        <p>Ocean conservation, marine traditions, and coastal stewardship.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="media" class="section-media">
+    <h2>Citizen TV Media Launch</h2>
+    <p>Highlights and coverage from the official Watamu Cultural Festival media launch.</p>
+    <div class="card">
+      <p>Launch coverage video embed or link goes here when ready.</p>
+    </div>
+  </section>
+
+  <section id="apply" class="section-apply">
+    <h2>Applications &amp; Registration</h2>
+    <p>Click below to open the registration form and submit your application for the festival.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Vendors &amp; Artisans</h3>
+        <p>Apply for food, craft, or exhibition space at the festival.</p>
+        <a href="https://forms.gle/6kVZwxv7TPgfdpGu7" target="_blank" rel="noopener noreferrer" class="card-link">Open Registration Form</a>
+      </div>
+      <div class="card">
+        <h3>International Hub &amp; Partners</h3>
+        <p>Register institutional, cultural, or international participation.</p>
+        <a href="https://forms.gle/6kVZwxv7TPgfdpGu7" target="_blank" rel="noopener noreferrer" class="card-link">Open Registration Form</a>
+      </div>
+      <div class="card">
+        <h3>Performers &amp; Creatives</h3>
+        <p>Submit your act, showcase, or cultural presentation.</p>
+        <a href="https://forms.gle/6kVZwxv7TPgfdpGu7" target="_blank" rel="noopener noreferrer" class="card-link">Open Registration Form</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" class="section-leadership">
+    <h2>Secretariat Leadership</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Abdul Mubarak Kemboi Rick</h3>
+        <p class="role">Festival Director</p>
+        <p>Watamu Cultural Festival Secretariat</p>
+      </div>
+      <div class="card">
+        <h3>Yassir Munga</h3>
+        <p class="role">Creative Director Lead</p>
+        <p>Creative direction, visual identity, and artistic programming.</p>
+      </div>
+      <div class="card">
+        <h3>Mary Katenyi</h3>
+        <p class="role">Cultural Heritage Officer</p>
+        <p>Cultural heritage preservation, research, and community traditions.</p>
+      </div>
+      <div class="card">
+        <h3>Noni Mbugguss</h3>
+        <p class="role">Coordination Lead</p>
+        <p>Operational coordination, logistics, and stakeholder alignment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="donate" class="section-donate">
+    <h2>Friends of the Festival</h2>
+    <p>Make a difference by supporting community programs, cultural preservation, and festival preparations for December 18–20, 2026.</p>
+    <div class="card">
+      <h3>Support via M-Pesa</h3>
+      <p>M-Pesa Number: <strong>0723732453</strong></p>
+    </div>
+  </section>
+
+  <section id="contact" class="section-contact">
+    <h2>Contact the Secretariat</h2>
+    <p>Reach out to the Watamu Cultural Festival Secretariat for inquiries, partnerships, and coordination.</p>
+    <div class="card">
+      <p>Email, phone, or WhatsApp details can be added here when ready.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Watamu Cultural Festival | December 18–20, 2026 | Watamu, Kenya</p>
+  </footer>
+
+</body>
+</html>
